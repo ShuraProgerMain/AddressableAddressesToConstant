@@ -1,0 +1,35 @@
+.unity-toggle__label {
+    padding-left: 15;
+    font-size: 16px;
+    -unity-font-style: normal;
+    color: rgb(199, 199, 199);
+}
+
+Toggle {
+    padding-bottom: 5px;
+    flex-direction: row-reverse;
+}
+
+#background {
+    height: 100%;
+    width: 100%;
+}
+
+#main-scroll-view {
+    padding:  15px;
+}
+
+#unity-content-viewport {
+    align-items: flex-start;
+}
+
+#unity-content-container {
+    align-items: flex-start;
+}
+
+#generate-scripts-button {
+    font-size: 16px;
+    padding: 5px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
