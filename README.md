@@ -8,6 +8,7 @@
 Каждая выбранная в окне группа равна 1 скрипту внутри которого будут константы для каждого объекта.
 
 *Окно выбора групп: **Tools>AddressableAddressesToConstants***
+
 ![Pasted image 20230721142759](https://github.com/ShuraProgerMain/AddressableAddressesToConstant/assets/67688368/5e1cc3af-52d5-48c1-9ff4-f9184d0d8429)
 
 *Те самые группы и файлы в них*
