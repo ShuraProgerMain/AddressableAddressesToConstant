@@ -16,5 +16,6 @@
 
 *После нажатия на кнопку **Generate Scripts** создаются 2 класса по пути:
 **Assets/Scripts/AddressableExtensions/\[GroupName].cs***
+
 ![Pasted image 20230721142913](https://github.com/ShuraProgerMain/AddressableAddressesToConstant/assets/67688368/9ca4fe49-61db-4b23-8d65-70958e370109)
 ![Pasted image 20230721142855](https://github.com/ShuraProgerMain/AddressableAddressesToConstant/assets/67688368/1c10d2e6-1c62-49fb-b5b7-f0b7d25fad8a)
