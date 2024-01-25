@@ -22,8 +22,9 @@ namespace GenerateAddressableAddressesConstants.GetAddressableAddresses
         
         public async Task InstanceFile(AddressableGroupData data)
         {
-            var groupName = CultureInfo.CurrentCulture.TextInfo.ToTitleCase(data.GroupName).Replace(" ", "");
-            
+            var groupName = data.GroupName.Replace(" ", string.Empty);
+
+            Debug.Log($"Group name {groupName}");
             IList<string> allLines = new List<string>
             {
                 "namespace AddressableExtensions" ,
@@ -47,7 +48,7 @@ namespace GenerateAddressableAddressesConstants.GetAddressableAddresses
         
         private string FormatAddress(string text)
         {
-            return $"\n        public const string {CultureInfo.CurrentCulture.TextInfo.ToTitleCase(text.Replace(" ", string.Empty))} = \"{text}\";";
+            return $"\n        public const string {text.Replace(" ", string.Empty)} = \"{text}\";";
         }
     }
 }

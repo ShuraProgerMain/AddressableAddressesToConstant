@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using UnityEditor;
 using UnityEditor.AddressableAssets;
 using UnityEditor.AddressableAssets.Settings;
+using UnityEngine;
 
 namespace GenerateAddressableAddressesConstants.GetAddressableAddresses
 {
@@ -27,7 +29,8 @@ namespace GenerateAddressableAddressesConstants.GetAddressableAddresses
                 for (var i  = 0; i < addressableAssetGroup.Value.Length; i++)
                 {
                     var address = addressableAssetGroup.Value[i].address;
-                    
+
+                    Debug.Log(address);
                     if (address.Contains('/') || address.Contains('.'))
                     {
                         SimplifyAddressableName(addressableAssetGroup.Value, i, FormatAddress(address));
@@ -37,6 +40,8 @@ namespace GenerateAddressableAddressesConstants.GetAddressableAddresses
                 await creator.InstanceFile(new AddressableGroupData(addressableAssetGroup.Key,
                     addressableAssetGroup.Value.Select(x => x.address).ToArray()));
             }
+
+            AssetDatabase.Refresh();
         }
 
         private string FormatAddress(string address)
@@ -47,6 +52,7 @@ namespace GenerateAddressableAddressesConstants.GetAddressableAddresses
 
         private void SimplifyAddressableName(AddressableAssetEntry[] actualEntries, int index, string newAddress)
         {
+            Debug.Log(newAddress);
             actualEntries[index].address = newAddress;
         }
     }
